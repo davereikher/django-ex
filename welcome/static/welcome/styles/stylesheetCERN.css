@@ -131,6 +131,20 @@ html, body {
 	background-position: left top;
 	/* background-repeat: repeat; */
 }
+.statuserror{
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) inset;
+ background-color: #FF0000;
+ margin:0;
+ text-align: center;
+ color: #FFFFFF;
+}
+.statusok{
+ box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) inset;
+ background-color: #00FF00;
+ margin:0;
+ text-align: center;
+ color: #FFFFFF;
+}
 .main {
    display: block;
    height: auto;
@@ -254,6 +268,19 @@ form#cyoq input {
 }
 .whitediv.lastwhite {
 	margin-bottom: 30px;
+}
+.whitediv.central{
+	text-align: center;
+}
+.whitediv.central.emph{
+	font-weight: bold;
+	font-size: 150%;
+}
+.whitediv.help{
+	background-color:#f9fe01;
+	border-radius:20px;
+	padding:30px;
+	font-weight: bold;
 }
 div.tablediv {
     height: auto;

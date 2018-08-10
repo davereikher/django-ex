@@ -2,16 +2,17 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from welcome.views import assembly, wiring, home
+from welcome.views import assembly, wiring, wedge_selection
 
 urlpatterns = [
     # Examples:
     # url(r'^$', 'project.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$', home),
+    url(r'^$', wedge_selection),
     url(r'^assembly$', assembly),
-    url(r'^wiring$', wiring),
+    url(r'^wiring_[0-9]$', wiring),
+    url(r'^wedge_selection$', wedge_selection),
     url(r'^admin/', include(admin.site.urls)),
 ]
 

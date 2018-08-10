@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import PageView
+from .models import WedgeAssembly
 
 # Register your models here.
 
 
-class PageViewAdmin(admin.ModelAdmin):
-    list_display = ['hostname', 'timestamp']
+class WedgeAssemblyAdmin(admin.ModelAdmin):
+    list_display = ['quad1', 'shim1']
 
-admin.site.register(PageView, PageViewAdmin)
+admin.site.register(WedgeAssembly, WedgeAssemblyAdmin)
