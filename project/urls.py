@@ -2,7 +2,9 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from welcome.views import assembly, wiring, wedge_selection
+from welcome.wedge_assembly import assembly
+from welcome.wedge_selection import wedge_selection, select_existing
+from welcome.wedge_wiring import wiring
 
 urlpatterns = [
     # Examples:
@@ -11,7 +13,8 @@ urlpatterns = [
 
     url(r'^$', wedge_selection),
     url(r'^assembly$', assembly),
-    url(r'^wiring_[0-9]$', wiring),
+    url(r'^select_existing$', select_existing),
+    url(r'^wiring_[0-9]$', wiring), #TODO: limit to 0-maximum (not 0-9)
     url(r'^wedge_selection$', wedge_selection),
     url(r'^admin/', include(admin.site.urls)),
 ]
