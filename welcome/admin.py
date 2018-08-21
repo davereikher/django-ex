@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import WedgeAssembly
+from .models import WedgeRegistrationModel
 
 # Register your models here.
 
 
-class WedgeAssemblyAdmin(admin.ModelAdmin):
-    list_display = ['quad1', 'shim1']
+class WedgeRegistrationModelAdmin(admin.ModelAdmin):
+    list_display = ['wedge_l_s', 'wedge_p_c', 'user_name', 'creation_date']
 
-admin.site.register(WedgeAssembly, WedgeAssemblyAdmin)
+admin.site.register(WedgeRegistrationModel, WedgeRegistrationModelAdmin)

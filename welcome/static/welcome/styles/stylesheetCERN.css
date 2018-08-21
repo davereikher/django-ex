@@ -2330,3 +2330,39 @@ input#savePrt {
 	padding-left: 5px;
 	text-align: left;
 }
+
+.cd-popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.cd-popup.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container {
+  transform: translateY(-40px);
+  transition-property: transform;
+  transition-duration: 0.3s;
+
+	text-align: center;
+   background-color: #FF0000;*/
+
+  position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+/*    animation-name: animatetop;
+  
+  animation-duration: 0.4s*/
+}
+
+.is-visible .cd-popup-container {
+  transform: translateY(0);
+}

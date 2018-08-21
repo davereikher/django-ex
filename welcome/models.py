@@ -4,9 +4,12 @@ from . import wedge_utils as wu
 
 # Create your models here.
 
-class WedgeAssembly(models.Model):
-    quad1 = models.CharField(max_length=32, choices=wu.get_list_of_available_quads("L1"))
-    shim1 = models.CharField(max_length=32)
+class WedgeRegistrationModel(models.Model):
+    wedge_l_s = models.CharField(choices=(("L", "Large"), ("S", "Small")), max_length=1)
+    wedge_p_c = models.CharField(choices=(("P", "Pivot"), ("C", "Confirm")), max_length=1)
+    user_name = models.CharField(max_length=32)
+    creation_date = models.DateField()
+
 
 # models.DateTimeField(auto_now_add=True)
 
